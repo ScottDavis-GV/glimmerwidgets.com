@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glimmer: desktop widgets for developers</title>
+<meta name="description" content="Small panels at the edge of your screen: build status, pull requests, focus sessions that end on time, your next meeting, and unpushed git work.">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="i-traffic" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2m0 5a5 5 0 0 1 5 -5h0a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h0a5 5 0 0 1 -5 -5z"/><path d="M12 7m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M12 17m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></g>
+    <g id="i-timebox" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 1 0 16 0a8 8 0 1 0-16 0"/><path d="M12 9v4l2.5 2.5M9 2h6"/></g>
+    <g id="i-upload" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"/><path d="M7.5 8.5L12 4l4.5 4.5"/><path d="M5 14v5h14v-5"/></g>
+    <g id="i-grid" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/></g>
+    <g id="i-pin" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4.5l-4 4-4 1.5-1.5 1.5 7 7 1.5-1.5 1.5-4 4-4"/><path d="M9 15l-4.5 4.5"/><path d="M14.5 4l5.5 5.5"/></g>
+    <g id="i-close" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></g>
+    <g id="i-wifi" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 18h.01M9.17 15.17a4 4 0 0 1 5.66 0M6.34 12.34a8 8 0 0 1 11.32 0M3.51 9.51a12 12 0 0 1 16.98 0"/></g>
+    <g id="i-pr" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M6 8l0 8"/><path d="M11 6h5a2 2 0 0 1 2 2v8"/><path d="M14 9l-3 -3l3 -3"/></g>
+    <g id="i-cal" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3l0 4"/><path d="M8 3l0 4"/><path d="M4 11l16 0"/><path d="M8 15h2v2h-2z"/></g>
+  </defs>
+</svg>
+
+<header class="wrap top">
+  <a class="brand" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-grid"/></svg>Glimmer</a>
+  <nav aria-label="Site">
+    <a href="./" aria-current="page">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="mailto:hello@glimmerwidgets.com">Contact</a>
+  </nav>
+</header>
+
+<section class="wrap hero" aria-labelledby="hero-title">
+  <div>
+    <span class="status">Early access · beta open</span>
+    <h1 id="hero-title">Know what's red, what's waiting on you, and when to <em>stop</em>.</h1>
+    <p class="lede">Glimmer puts small panels at the edge of your screen for developers who lose track of time once they're deep in the work: build status, your pull request queue, a focus timer that respects your calendar, your next meeting, and the git work you haven't pushed yet. Buy the widgets you want, or all of them.</p>
+    <div class="facts"><span>Windows, macOS, Linux</span><span>No account of ours</span><span>Works offline</span></div>
+    <div class="cta"><a class="btn" href="mailto:hello@glimmerwidgets.com?subject=Glimmer%20beta">Ask to join the beta</a><span class="note">Pricing is coming soon.</span></div>
+  </div>
+
+  <div class="desk" role="img" aria-label="Three Glimmer panels on a desktop: build status with one failing build, a timebox counting down to 12:15 PM before a 1:00 PM lecture, and unpushed work listing two repos, above a taskbar whose single tray icon is red because a build is failing.">
+    <div class="desk-panels">
+      <div class="p">
+        <div class="bar"><svg viewBox="0 0 24 24"><use href="#i-traffic"/></svg><span class="t">Build status</span><span class="btns"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg><svg viewBox="0 0 24 24"><use href="#i-close"/></svg></span></div>
+        <div class="strip"><span class="k ok">5 passing</span><span class="k danger">1 failing</span><span class="k warn">1 running</span></div>
+        <div class="row"><span class="dot danger"></span><div style="min-width:0"><div class="n">api-gateway</div><div class="m">main · CI</div></div><span class="age">12m</span></div>
+        <div class="row"><span class="dot warn"></span><div style="min-width:0"><div class="n">mobile-app</div><div class="m">main · running 2m</div></div><span class="age">now</span></div>
+        <div class="row"><span class="dot ok"></span><div style="min-width:0"><div class="n">web</div><div class="m">main · CI</div></div><span class="age">1h</span></div>
+        <div class="row"><span class="dot ok"></span><div style="min-width:0"><div class="n">docs</div><div class="m">main · Deploy</div></div><span class="age">3h</span></div>
+        <div class="row"><span class="dot ok"></span><div style="min-width:0"><div class="n">billing</div><div class="m">main · CI</div></div><span class="age">1d</span></div>
+        <div class="ft"><span>Updated just now · every 60s</span></div>
+      </div>
+      <div class="p">
+        <div class="bar"><svg viewBox="0 0 24 24"><use href="#i-timebox"/></svg><span class="t">Timebox</span><span class="btns"><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg><svg viewBox="0 0 24 24"><use href="#i-close"/></svg></span></div>
+        <div class="strip"><span>Lecture 1:00 PM · stop by 12:15 PM</span></div>
+        <div class="tb">
+          <div class="proj">Chapter 4 draft</div>
+          <div class="cd">41:58</div>
+          <div class="ph">Focus</div>
+          <div class="tm">warn 11:55 AM · shutdown 12:15 PM</div>
+          <div class="btnrow"><span>Pause</span><span>Finish</span><span>Cancel</span></div>
+        </div>
+      </div>
+      <div class="p">
+        <div class="bar"><svg viewBox="0 0 24 24"><use href="#i-upload"/></svg><span class="t">Unpushed work</span><span class="btns"><svg viewBox="0 0 24 24"><use href="#i-close"/></svg></span></div>
+        <div class="banner">Before you stop: 2 repos with work not pushed.</div>
+        <div class="row"><span class="dot warn"></span><div style="min-width:0"><div class="n">api-gateway</div><div class="m">main · 3 changed · 1 to push</div></div><span class="age"></span></div>
+        <div class="row"><span class="dot warn"></span><div style="min-width:0"><div class="n">docs</div><div class="m">spike · never pushed</div></div><span class="age"></span></div>
+      </div>
+    </div>
+    <div class="taskbar">
+      <div class="tip">Builds: 5 passing, 1 failing, 1 running<br>Timebox: Chapter 4 draft, 42m to shutdown<br>PR queue: 2 reviews waiting<br>Next meeting: Lecture, in 1h 27m</div>
+      <svg class="quiet" viewBox="0 0 24 24"><use href="#i-wifi"/></svg>
+      <svg class="grid-ico" viewBox="0 0 24 24"><use href="#i-grid"/></svg>
+      <span>11:33 AM</span>
+    </div>
+    <p class="desk-caption">One tray icon for everything, in the colour of whatever needs you most. Red here: a build is failing.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="band" aria-labelledby="bs">
+    <div>
+      <span class="eyebrow">Widget</span>
+      <h2 id="bs"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-traffic"/></svg>Build status</h2>
+      <p class="pitch">Every repository you own, one line each, worst result first. You see a broken main branch before your teammates have to tell you.</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><h3>The result that matters</h3><p>Each repo shows the worst of its workflows' latest runs on the default branch. Failing sorts to the top, then running, then passing.</p></div>
+      <div class="feat"><h3>Told when it changes</h3><p>A notification when a build starts failing, and a quieter one when it recovers. Several changes at once arrive as one.</p></div>
+      <div class="feat"><h3>One click to the run</h3><p>Click a row or a notification to open that run on GitHub.</p></div>
+      <div class="feat"><h3>Light on your API limits</h3><p>Checks every 60 seconds with conditional requests, so an unchanged repo doesn't use your GitHub rate limit.</p></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="tb">
+    <div>
+      <span class="eyebrow">Widget</span>
+      <h2 id="tb"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-timebox"/></svg>Timebox</h2>
+      <p class="pitch">Focus sessions that end on time. It reads your calendar, works back from your next commitment, and gets louder the closer you get to it.</p>
+    </div>
+    <div class="feats">
+      <div class="example">
+        <span class="label">A 1:00 PM lecture, with a 30-minute walk and a 15-minute shutdown</span>
+        <div class="timeline">
+          <div class="focus"><b>until 11:55</b><span>focus</span></div>
+          <div class="warn"><b>11:55</b><span>silent nudge: no new subtasks</span></div>
+          <div class="shut"><b>12:15</b><span>chime: save, commit, hand off</span></div>
+          <div class="go"><b>12:30</b><span>overlay: time to go</span></div>
+        </div>
+      </div>
+      <div class="feat"><h3>Hard to ignore at the end</h3><p>A silent nudge, then a chime, then a full-screen overlay you have to dismiss. Built for the moment you'd otherwise look up and find it's 1:10.</p></div>
+      <div class="feat"><h3>Calendar-aware</h3><p>Google Calendar or Outlook, read-only. Choose which calendars are hard commitments and which only warn.</p></div>
+      <div class="feat"><h3>Easy to pick up again</h3><p>End with a short handoff note: what's done, where you are, the exact next step. It's waiting for you the next time you start that project.</p></div>
+      <div class="feat"><h3>Survives real life</h3><p>Sessions keep their deadlines through sleep, restarts and time-zone changes, and it says so plainly when your calendar couldn't be checked.</p></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="nm">
+    <div>
+      <span class="eyebrow">Free with Timebox</span>
+      <h2 id="nm"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cal"/></svg>Next meeting</h2>
+      <p class="pitch">A countdown to your next meeting, with a Join button, so the meeting doesn't start without you.</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><h3>One click to join</h3><p>Google Meet, Zoom, Teams and Webex links, found in the event's conference details, location or description.</p></div>
+      <div class="feat"><h3>A five-minute warning</h3><p>A reminder before each meeting, and the tray turns amber until it starts.</p></div>
+      <div class="feat"><h3>The one after, too</h3><p>Shows what's on now, what's next and what follows, or a single line when collapsed.</p></div>
+      <div class="feat"><h3>Same calendar, no extra setup</h3><p>Reads the calendar the timebox already reads, in your system's clock format.</p></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="up">
+    <div>
+      <span class="eyebrow">Widget</span>
+      <h2 id="up"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-upload"/></svg>Unpushed work</h2>
+      <p class="pitch">The work that lives only on this computer. Uncommitted changes, commits not pushed, branches that never left your machine.</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><h3>Every repo, at a glance</h3><p>Scans your project folders every five minutes and lists only the repos with something at risk. Clean ones are counted, not listed.</p></div>
+      <div class="feat"><h3>More than the current branch</h3><p>Other branches with unpushed commits, branches never pushed, stashes, and branches whose remote was deleted.</p></div>
+      <div class="feat"><h3>Leave the archives out</h3><p>Right-click a repo to exclude it, or the whole folder it lives in.</p></div>
+      <div class="feat"><h3>Never in your way</h3><p>Read-only git commands that don't lock your repo, so it never blocks the commands you run yourself.</p></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="pq">
+    <div>
+      <span class="eyebrow">Widget</span>
+      <h2 id="pq"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pr"/></svg>PR queue</h2>
+      <p class="pitch">What's waiting on you: pull requests that ask for your review, and your own that are ready to merge or need another push.</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><h3>Reviews, oldest first</h3><p>Requests made to you or one of your teams, the longest-waiting at the top.</p></div>
+      <div class="feat"><h3>Yours, by what they need</h3><p>Checks failing, changes requested, conflicts, ready to merge or still waiting: one clear state per pull request.</p></div>
+      <div class="feat"><h3>Told when it's your turn</h3><p>A notification for a new review request, or when one of yours gets changes requested or starts failing.</p></div>
+      <div class="feat"><h3>No new sign-in</h3><p>Uses the GitHub CLI's sign-in, like build status, with its own choice of account.</p></div>
+    </div>
+  </section>
+
+  <section class="together" aria-labelledby="tog">
+    <span class="eyebrow">Better together</span>
+    <h2 id="tog">Separate widgets that know about each other when you own more than one.</h2>
+    <div class="flows">
+      <div class="flow"><span class="when">At the timebox's shutdown phase</span><p>Unpushed work rescans and comes forward if anything isn't pushed: "Before you stop: 2 repos with work not pushed."</p></div>
+      <div class="flow"><span class="when">During a focus session</span><p>Good-news updates, like a build recovering, wait until you stop. A newly failing build still gets through.</p></div>
+      <div class="flow"><span class="when">All the time</span><p>One process, one tray icon, one settings file, and one look, whichever widgets you own.</p></div>
+    </div>
+  </section>
+
+  <section class="facts-grid" aria-label="Details">
+    <div>
+      <h3>Stays out of the way</h3>
+      <ul>
+        <li>Panels fit their content and stop at 60% of the screen</li>
+        <li>Collapse any panel to a one-line summary</li>
+        <li>Light, dark, or follow the system</li>
+        <li>Times in your system's 12- or 24-hour format</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Your notifications, your rules</h3>
+      <ul>
+        <li>Off, important only, or all, per widget</li>
+        <li>No repeats within 30 minutes</li>
+        <li>Never more than three a minute from one widget</li>
+        <li>Respects Focus Assist and macOS Focus</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Private by design</h3>
+      <ul>
+        <li>No server of ours; it talks only to the services you connect</li>
+        <li>Calendar access is read-only</li>
+        <li>Sign-ins encrypted with your operating system's own storage</li>
+        <li>Calendar details never leave your computer</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Buy only what you use</h3>
+      <ul>
+        <li>Each widget sold on its own</li>
+        <li>A bundle covers them all</li>
+        <li>One license key per purchase, entered once</li>
+        <li>Keeps working offline for weeks between checks</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Accessible</h3>
+      <ul>
+        <li>Text meets WCAG 2.2 AA contrast in both themes</li>
+        <li>Status is never shown by colour alone</li>
+        <li>Every control reachable by keyboard</li>
+        <li>Respects reduced motion</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Where it runs</h3>
+      <ul>
+        <li>Windows, macOS and Linux</li>
+        <li>Lives in the system tray, not the taskbar</li>
+        <li>Starts at login if you want it to</li>
+        <li>Build status and the PR queue read GitHub today</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="roadmap" aria-labelledby="rm">
+    <span class="eyebrow">Coming next</span>
+    <h2 id="rm">More Glimmer widgets on the way</h2>
+    <div class="chips">
+      <span class="chip">Day's end</span>
+      <span class="chip">Third-party status pages</span>
+      <span class="chip">On-call</span>
+      <span class="chip">Deployments</span>
+      <span class="chip">Expiry watch</span>
+      <span class="chip">GitLab, Bitbucket and TeamCity for build status</span>
+    </div>
+    <p class="foot">Panel images are illustrations of the current build with example repositories.</p>
+  </section>
+</main>
+
+<footer class="wrap site-foot">
+  <span>&copy; 2026 Scott Davis Labs</span>
+  <nav aria-label="Footer"><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a><a href="mailto:hello@glimmerwidgets.com">hello@glimmerwidgets.com</a></nav>
+</footer>
+
+</body>
+</html>
