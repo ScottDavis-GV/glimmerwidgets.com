@@ -19,6 +19,9 @@
     <g id="i-close" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></g>
     <g id="i-wifi" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 18h.01M9.17 15.17a4 4 0 0 1 5.66 0M6.34 12.34a8 8 0 0 1 11.32 0M3.51 9.51a12 12 0 0 1 16.98 0"/></g>
     <g id="i-pr" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M6 8l0 8"/><path d="M11 6h5a2 2 0 0 1 2 2v8"/><path d="M14 9l-3 -3l3 -3"/></g>
+    <g id="i-stretch" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M5 20l5 -.5l1 -2"/><path d="M18 20v-5h-5.5l2.5 -6.5l-5.5 1l1.5 2"/></g>
+    <g id="i-sunset" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 0 1 8 0"/><path d="M3 21l18 0"/><path d="M12 9v-6l3 3m-6 0l3 -3"/></g>
+    <g id="i-sunrise" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 0 1 8 0"/><path d="M3 21l18 0"/><path d="M12 3v6l3 -3m-6 0l3 3"/></g>
     <g id="i-cal" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3l0 4"/><path d="M8 3l0 4"/><path d="M4 11l16 0"/><path d="M8 15h2v2h-2z"/></g>
   </defs>
 </svg>
@@ -37,7 +40,7 @@
   <div>
     <span class="status">Early access · beta open</span>
     <h1 id="hero-title">Know what's red, what's waiting on you, and when to <em>stop</em>.</h1>
-    <p class="lede">Glimmer puts small panels at the edge of your screen for developers who lose track of time once they're deep in the work: build status, your pull request queue, a focus timer that respects your calendar, your next meeting, and the git work you haven't pushed yet. The timebox is free; Glimmer Pro adds everything else.</p>
+    <p class="lede">Glimmer puts small panels at the edge of your screen for developers who lose track of time once they're deep in the work: build status, your pull request queue, a focus timer that respects your calendar, your next meeting, the git work you haven't pushed yet, a nudge to stand up, and a clean end to the day. The timebox is free; Glimmer Pro adds everything else.</p>
     <div class="facts"><span>Windows, macOS, Linux</span><span>No account of ours</span><span>Works offline</span></div>
     <div class="cta"><a class="btn" href="mailto:hello@glimmerwidgets.com?subject=Glimmer%20beta">Ask to join the beta</a><a class="note" href="#pricing">Timebox free · Glimmer Pro $20</a></div>
   </div>
@@ -162,13 +165,55 @@
     </div>
   </section>
 
+  <section class="band" aria-labelledby="su">
+    <div>
+      <span class="eyebrow">Glimmer Pro</span>
+      <h2 id="su"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-stretch"/></svg>Stand up</h2>
+      <p class="pitch">How long you've been sitting, and a gentle reminder to stand up that knows about your meetings and focus sessions.</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><h3>Never mid-meeting</h3><p>It waits for a meeting to end, or comes early when one starts in ten minutes: "Stand up before your 2:00 meeting."</p></div>
+      <div class="feat"><h3>Respects your focus</h3><p>During a timebox session it waits for the shutdown phase, but never past 90 minutes of sitting.</p></div>
+      <div class="feat"><h3>Notices your breaks</h3><p>Lunch, a locked screen or five minutes away from the keyboard counts as a break, so it never nags you just after you came back.</p></div>
+      <div class="feat"><h3>Gentle, not pushy</h3><p>A silent notification, Done, 5 more minutes or Skip, and a short stretch suggestion. No streaks, no guilt.</p></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="de">
+    <div>
+      <span class="eyebrow">Glimmer Pro</span>
+      <h2 id="de"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sunset"/></svg>Day's end</h2>
+      <p class="pitch">At a stop time you choose, what's still open from your other widgets, so you stop cleanly instead of whenever you look up.</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><h3>One checklist for the day</h3><p>Repos not pushed, builds failing, pull requests waiting on you, and today's handoff notes, from the widgets you run.</p></div>
+      <div class="feat"><h3>A heads-up first</h3><p>Fifteen minutes before your stop time the panel glimmers and says what's open, so there's time to wrap up.</p></div>
+      <div class="feat"><h3>All clear, or not</h3><p>The tray turns amber only at the end of the day, and only while something is still open.</p></div>
+      <div class="feat"><h3>Done for today</h3><p>One click closes the day; no more reminders until your next working day.</p></div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="tm">
+    <div>
+      <span class="eyebrow">Glimmer Pro</span>
+      <h2 id="tm"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sunrise"/></svg>Tomorrow</h2>
+      <p class="pitch">Write down what to do first tomorrow while it's still obvious, and find it waiting for you in the morning.</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><h3>Written at the end of the day</h3><p>A short list you write and edit yourself, with today's handoff next steps offered to add.</p></div>
+      <div class="feat"><h3>First thing in the morning</h3><p>On your next working day the panel becomes Today, first, glimmers, and shows the first item.</p></div>
+      <div class="feat"><h3>Nothing lost</h3><p>Plan tomorrow carries over whatever you didn't tick. The list never moves on by itself.</p></div>
+      <div class="feat"><h3>Part of Day's end</h3><p>Day's end shows tomorrow's list, or nudges you when nothing's written yet.</p></div>
+    </div>
+  </section>
+
   <section class="together" aria-labelledby="tog">
     <span class="eyebrow">Better together</span>
     <h2 id="tog">Separate widgets that know about each other when you own more than one.</h2>
     <div class="flows">
       <div class="flow"><span class="when">At the timebox's shutdown phase</span><p>Unpushed work rescans and comes forward if anything isn't pushed: "Before you stop: 2 repos with work not pushed."</p></div>
       <div class="flow"><span class="when">During a focus session</span><p>Good-news updates, like a build recovering, wait until you stop. A newly failing build still gets through.</p></div>
-      <div class="flow"><span class="when">All the time</span><p>One process, one tray icon, one settings file, and one look, whichever widgets you own.</p></div>
+      <div class="flow"><span class="when">At the end of the day</span><p>Day's end gathers what's still open from Unpushed work, Build status and the PR queue, and today's timebox handoffs become suggestions for Tomorrow.</p></div>
     </div>
   </section>
 
@@ -177,7 +222,7 @@
     <h2 id="pr">The timebox is free. Glimmer Pro is everything else.</h2>
     <div class="flows">
       <div class="flow"><span class="when">Free</span><p><strong>Timebox</strong>, with every feature, on as many computers as you like. No key, no trial, no time limit.</p></div>
-      <div class="flow"><span class="when">Glimmer Pro · $20 once</span><p>Build status, next meeting, unpushed work, the PR queue, and every widget we add, on up to three computers. Includes 12 months of updates and support. <strong>The first 100 buyers pay $10</strong> with the code FOUNDER.</p></div>
+      <div class="flow"><span class="when">Glimmer Pro · $20 once</span><p>Build status, the PR queue, next meeting, unpushed work, stand up, Day's end, Tomorrow, and every widget we add, on up to three computers. Includes 12 months of updates and support. <strong>The first 100 buyers pay $10</strong> with the code FOUNDER.</p></div>
       <div class="flow"><span class="when">After the first year · $10 a year, if you want it</span><p>Renew for another 12 months of updates, new widgets and support. If you don't, nothing turns off: Pro keeps working on the version you have.</p></div>
     </div>
     <p class="foot">Try every Pro widget free for 14 days with a trial key. If Glimmer Pro isn't right for you, ask for a refund within 30 days. Prices in US dollars.</p>
@@ -189,6 +234,7 @@
       <ul>
         <li>Panels fit their content and stop at 60% of the screen</li>
         <li>Collapse any panel to a one-line summary</li>
+        <li>A home dock: send panels to a corner, drag them in where you like</li>
         <li>Light, dark, or follow the system</li>
         <li>Times in your system's 12- or 24-hour format</li>
       </ul>
@@ -244,8 +290,7 @@
     <span class="eyebrow">Coming next</span>
     <h2 id="rm">More Glimmer widgets on the way</h2>
     <div class="chips">
-      <span class="chip">Stand up and stretch</span>
-      <span class="chip">Day's end</span>
+      <span class="chip">Work journal</span>
       <span class="chip">Third-party status pages</span>
       <span class="chip">On-call</span>
       <span class="chip">Deployments</span>
