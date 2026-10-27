@@ -144,6 +144,7 @@ p { margin: 0; }
 .flow { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; display: grid; gap: 8px; align-content: start; }
 .flow .when { font: 500 12px/1.4 var(--font-mono); color: var(--accent); }
 .flow p { color: var(--ink-2); font-size: 16px; }
+.together .foot { margin-top: 16px; }
 
 /* ---------- Facts ---------- */
 .facts-grid { border-top: 1px solid var(--rule); padding-block: 44px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 36px; }
