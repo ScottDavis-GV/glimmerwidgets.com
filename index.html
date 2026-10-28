@@ -22,6 +22,7 @@
     <g id="i-stretch" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M5 20l5 -.5l1 -2"/><path d="M18 20v-5h-5.5l2.5 -6.5l-5.5 1l1.5 2"/></g>
     <g id="i-sunset" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 0 1 8 0"/><path d="M3 21l18 0"/><path d="M12 9v-6l3 3m-6 0l3 -3"/></g>
     <g id="i-sunrise" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 0 1 8 0"/><path d="M3 21l18 0"/><path d="M12 3v6l3 -3m-6 0l3 3"/></g>
+    <g id="i-activity" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8l4-16l3 8h4"/></g>
     <g id="i-notebook" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18"/><path d="M13 8l2 0"/><path d="M13 12l2 0"/></g>
     <g id="i-cal" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3l0 4"/><path d="M8 3l0 4"/><path d="M4 11l16 0"/><path d="M8 15h2v2h-2z"/></g>
   </defs>
@@ -42,7 +43,7 @@
   <div>
     <span class="status">Beta · Windows and Linux</span>
     <h1 id="hero-title">Know what's red, what's waiting on you, and when to <em>stop</em>.</h1>
-    <p class="lede">Glimmer puts small panels at the edge of your screen for developers who lose track of time once they're deep in the work: build status, your pull request queue, a focus timer that respects your calendar, your next meeting, the git work you haven't pushed yet, a nudge to stand up, a clean end to the day, and a journal of what you did. The timebox is free; Glimmer Pro adds everything else.</p>
+    <p class="lede">Glimmer puts small panels at the edge of your screen for developers who lose track of time once they're deep in the work: build status, your pull request queue, a focus timer that respects your calendar, your next meeting, the git work you haven't pushed yet, a nudge to stand up, a clean end to the day, a journal of what you did, and the status of the services you depend on. The timebox is free; Glimmer Pro adds everything else.</p>
     <div class="facts"><span>Windows and Linux; macOS later</span><span>No account of ours</span><span>Works offline</span></div>
     <div class="cta"><a class="btn" href="mailto:hello@glimmerwidgets.com?subject=Glimmer%20beta">Ask to join the beta</a><a class="note" href="#pricing">Timebox free · Glimmer Pro $20</a></div>
   </div>
@@ -223,6 +224,20 @@
     </div>
   </section>
 
+  <section class="band" aria-labelledby="ss">
+    <div>
+      <span class="eyebrow">Glimmer Pro</span>
+      <h2 id="ss"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-activity"/></svg>Service status</h2>
+      <p class="pitch">Is it you or them? The status pages of the services you depend on, in one panel, so you know GitHub is down before you start debugging your push.</p>
+    </div>
+    <div class="feats">
+      <div class="feat"><h3>The services developers use</h3><p>GitHub, npm, Cloudflare, OpenAI, Claude, Vercel, Netlify, Supabase, Sentry and more, ticked in a menu. Add any other Statuspage page by its address.</p></div>
+      <div class="feat"><h3>Only the parts you use</h3><p>Watch a whole page, or just the components you depend on, so a data centre on another continent doesn't turn your tray amber.</p></div>
+      <div class="feat"><h3>Told when it breaks</h3><p>A notification when a service you watch has an outage, with the incident's title. One click opens it.</p></div>
+      <div class="feat"><h3>No sign-in</h3><p>Reads each page's public status every five minutes. Nothing about you is sent.</p></div>
+    </div>
+  </section>
+
   <section class="together" aria-labelledby="tog">
     <span class="eyebrow">Better together</span>
     <h2 id="tog">Separate widgets that know about each other when you own more than one.</h2>
@@ -238,7 +253,7 @@
     <h2 id="pr">The timebox is free. Glimmer Pro is everything else.</h2>
     <div class="flows">
       <div class="flow"><span class="when">Free</span><p><strong>Timebox</strong>, with every feature, on as many computers as you like. No key, no trial, no time limit.</p></div>
-      <div class="flow"><span class="when">Glimmer Pro · $20 once</span><p>Build status, the PR queue, next meeting, unpushed work, stand up, Day's end, Tomorrow, the journal, and every widget we add, on up to three computers. Includes 12 months of updates and support. <strong>The first 100 buyers pay $10</strong> with the code FOUNDER.</p></div>
+      <div class="flow"><span class="when">Glimmer Pro · $20 once</span><p>Build status, the PR queue, next meeting, unpushed work, stand up, Day's end, Tomorrow, the journal, service status, and every widget we add, on up to three computers. Includes 12 months of updates and support. <strong>The first 100 buyers pay $10</strong> with the code FOUNDER.</p></div>
       <div class="flow"><span class="when">After the first year · $10 a year, if you want it</span><p>Renew for another 12 months of updates, new widgets and support. If you don't, nothing turns off: Pro keeps working on the version you have.</p></div>
     </div>
     <p class="foot">Try every Pro widget free for 14 days with a trial key. If Glimmer Pro isn't right for you, ask for a refund within 30 days. Prices in US dollars.</p>
@@ -309,7 +324,7 @@
     <div class="chips">
       <span class="chip">macOS</span>
       <span class="chip">A week view for the journal</span>
-      <span class="chip">Third-party status pages</span>
+      <span class="chip">AWS, Google Cloud and Stripe for service status</span>
       <span class="chip">On-call</span>
       <span class="chip">Deployments</span>
       <span class="chip">Expiry watch</span>

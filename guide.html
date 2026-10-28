@@ -49,6 +49,7 @@
     <li><a href="#daysend">Day's end</a></li>
     <li><a href="#tomorrow">Tomorrow</a></li>
     <li><a href="#journal">Journal</a></li>
+    <li><a href="#status">Service status</a></li>
     <li><a href="#updates">Updates</a></li>
     <li><a href="#uninstall">Uninstalling</a></li>
     <li><a href="#help">Getting help</a></li>
@@ -164,6 +165,15 @@
   <ul>
     <li>Step through days with the arrows. <strong>Copy</strong> puts the day on the clipboard as Markdown, ready for a standup or a timesheet.</li>
     <li>Each day is a Markdown file, <code>YYYY/YYYY-MM-DD.md</code>, in <code>Documents\Glimmer Journal</code>. Choose another folder, such as an Obsidian vault, in <strong>☰ ▸ Journal folder…</strong>.</li>
+  </ul>
+
+  <h2 id="status">Service status <small>Pro</small></h2>
+  <p>The status pages of the services you depend on, worst first. Click a row to open its incident, or the status page.</p>
+  <ul>
+    <li>Tick services in <strong>☰ ▸ Services</strong>. GitHub and npm are ticked to start with.</li>
+    <li>For a service that isn't listed, choose <strong>Add another status page…</strong> and type its status page's address, such as <code>status.example.com</code>. Glimmer reads pages made with Statuspage or incident.io, which most developer services use; it says so if it can't read one.</li>
+    <li>To watch only part of a service, open <strong>☰ ▸ Components to watch</strong> and tick the components you use. Cloudflare starts with just its core services, not its hundreds of data centres.</li>
+    <li>It checks every five minutes. An outage on a service you watch turns the tray amber or red and sends a notification.</li>
   </ul>
 
   <h2 id="updates">Updates</h2>
