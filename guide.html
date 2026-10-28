@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide · Glimmer</title>
+<meta name="description" content="How to install Glimmer, find your way around its panels, and use each widget.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="i-grid" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/></g>
+  </defs>
+</svg>
+
+<header class="wrap top">
+  <a class="brand" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-grid"/></svg>Glimmer</a>
+  <nav aria-label="Site">
+    <a href="./">Home</a>
+    <a href="guide.html" aria-current="page">Guide</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="mailto:hello@glimmerwidgets.com">Contact</a>
+  </nav>
+</header>
+
+<main class="wrap doc">
+  <h1>Using Glimmer</h1>
+  <p class="updated">For Glimmer 0.9 (beta)</p>
+
+  <div class="summary">
+    <p><strong>The short version:</strong> Glimmer lives in your system tray. Each widget is a small panel, and its <strong>☰</strong> button holds that widget's settings. Right-click the tray icon for the few settings that apply to every widget. The timebox is free; a Glimmer Pro or trial key turns on the rest.</p>
+  </div>
+
+  <ul class="toc" aria-label="Contents">
+    <li><a href="#install">Installing</a></li>
+    <li><a href="#panels">Panels and the tray</a></li>
+    <li><a href="#home">The home dock</a></li>
+    <li><a href="#keys">License keys</a></li>
+    <li><a href="#notifications">Notifications</a></li>
+    <li><a href="#timebox">Timebox</a></li>
+    <li><a href="#builds">Build status</a></li>
+    <li><a href="#prs">PR queue</a></li>
+    <li><a href="#meeting">Next meeting</a></li>
+    <li><a href="#unpushed">Unpushed work</a></li>
+    <li><a href="#stretch">Stand up</a></li>
+    <li><a href="#daysend">Day's end</a></li>
+    <li><a href="#tomorrow">Tomorrow</a></li>
+    <li><a href="#journal">Journal</a></li>
+    <li><a href="#updates">Updates</a></li>
+    <li><a href="#uninstall">Uninstalling</a></li>
+    <li><a href="#help">Getting help</a></li>
+  </ul>
+
+  <h2 id="install">Installing</h2>
+  <h3>Windows</h3>
+  <ol>
+    <li>Run the Glimmer installer. It installs for your account only and needs no administrator rights.</li>
+    <li>While Glimmer is in beta its installer isn't code-signed yet, so Windows may say "Windows protected your PC". Choose <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+    <li>Glimmer starts and puts its icon in the tray. If you can't see it, open the <strong>^</strong> next to the clock and drag the icon onto the taskbar.</li>
+  </ol>
+  <h3>Linux</h3>
+  <p>Install the <code>.deb</code> package, or make the <code>.AppImage</code> executable and run it. Your desktop needs a system tray; on GNOME, that's the AppIndicator extension.</p>
+
+  <h2 id="panels">Panels and the tray</h2>
+  <p>Each widget is a small panel that floats over your other windows and sizes itself to its content. Drag a panel by its title bar to move it; it remembers where you left it.</p>
+  <p>The buttons in a panel's title bar, from the right:</p>
+  <ul>
+    <li><strong>Close</strong> hides the panel. The widget keeps working; turn it back on from the tray.</li>
+    <li><strong>Collapse</strong> shrinks the panel to a one-line summary, such as "1 failing" or "Sitting 42 min".</li>
+    <li><strong>Home</strong> sends the panel to the <a href="#home">home dock</a>.</li>
+    <li><strong>Pin</strong> keeps the panel on top of other windows.</li>
+    <li><strong>☰</strong> holds the widget's own settings, its notifications, and Glimmer's settings.</li>
+  </ul>
+  <p>Some widgets add a button to the left of these, such as Refresh.</p>
+  <h3>The tray icon</h3>
+  <p>One icon stands for every widget, in the colour of whatever needs you most: red for a failing build, amber for something that wants your attention soon. Hover over it for a line from each widget. Click it to show or hide your first widget's panel.</p>
+  <p>Right-click it for the tray menu:</p>
+  <ul>
+    <li><strong>Widgets</strong> turns each widget on or off.</li>
+    <li><strong>Send widgets home</strong> lines every panel up in the home dock.</li>
+    <li><strong>Settings</strong> holds license keys, where the home dock is, the light or dark theme, holding notifications during focus sessions, and starting at login.</li>
+    <li><strong>Quit</strong> closes Glimmer.</li>
+  </ul>
+
+  <h2 id="home">The home dock</h2>
+  <p>The home dock is a corner of a screen where panels line up neatly. Press a panel's <strong>Home</strong> button, or <strong>Send widgets home</strong> in the tray menu. Panels fill the dock in the order you send them, and the others close the gap when one leaves.</p>
+  <ul>
+    <li>Drag a panel between two docked panels to put it there.</li>
+    <li>Choose the screen and corner in the tray menu's <strong>Settings ▸ Home</strong>. If that screen isn't connected, the dock uses the same corner of your main screen.</li>
+    <li><strong>Collapse when sent home</strong>, in the same menu, docks panels as one-line summaries.</li>
+  </ul>
+
+  <h2 id="keys">License keys</h2>
+  <p>The timebox needs no key. Every other widget needs a Glimmer Pro key, a 14-day trial key, or a beta key.</p>
+  <ol>
+    <li>Copy the key from your receipt email.</li>
+    <li>In the tray menu, choose <strong>Settings ▸ License keys…</strong>, paste the key and choose <strong>Add</strong>.</li>
+    <li>Choose <strong>Restart now</strong>. The Pro widgets turn on after the restart; switch them on or off in the tray menu's <strong>Widgets</strong>.</li>
+  </ol>
+  <p>A Pro key works on up to three computers. To move it, remove it in <strong>License keys…</strong> on the old computer first. Glimmer re-checks the key about once a week and keeps working offline for weeks between checks. A trial key tells you three days before it ends.</p>
+
+  <h2 id="notifications">Notifications</h2>
+  <ul>
+    <li>Each widget has its own setting in <strong>☰ ▸ Notifications</strong>: off, important only, or all.</li>
+    <li>When a widget notifies you, its panel glimmers briefly, so you can see which one it was.</li>
+    <li>With <strong>Hold notifications during focus sessions</strong> on (tray menu, Settings), news that can wait is held until your timebox session ends and listed in the tray menu as "While you focused". A newly failing build still gets through.</li>
+    <li>Glimmer never repeats a notification within 30 minutes, and respects Windows Focus Assist.</li>
+  </ul>
+
+  <h2 id="timebox">Timebox <small>Free</small></h2>
+  <p>A focus timer that ends before your next commitment.</p>
+  <ol>
+    <li>Type what you're working on, choose a length, and press <strong>Start</strong>.</li>
+    <li>As the end nears you get a silent nudge (stop starting new things), then a chime at shutdown (save, commit, note where you are), then a full-screen overlay when it's time to go.</li>
+    <li>Press <strong>Finish</strong> and write the handoff note: what's done, where you are, and the exact next action. The next time you start that project, the note is waiting.</li>
+  </ol>
+  <p><strong>Pause</strong> holds the session for an interruption; <strong>Cancel</strong> drops it.</p>
+  <h3>Connecting your calendar</h3>
+  <p>In <strong>☰ ▸ Timebox calendar</strong>, connect Google Calendar or Microsoft Outlook; access is read-only. Then choose which calendars are <strong>hard obligations</strong>, which end a session in time, and which are <strong>soft commitments</strong>, which only warn. <strong>Sample week</strong> lets you try it without connecting anything. Next meeting reads the same calendar.</p>
+
+  <h2 id="builds">Build status <small>Pro</small></h2>
+  <p>Your repositories' latest GitHub Actions results, worst first. Click a row to open the run on GitHub.</p>
+  <ol>
+    <li>Open <strong>☰ ▸ Account ▸ Add GitHub account…</strong>.</li>
+    <li>Glimmer copies a code and opens github.com/login/device. Paste the code and approve the Glimmer Widgets app. Its permissions are read-only.</li>
+    <li>The panel fills in by itself and checks again every 60 seconds.</li>
+  </ol>
+  <p>If you use the GitHub CLI (<code>gh</code>), its signed-in accounts are listed too. <strong>Sign out</strong> in the same menu forgets an account on this computer.</p>
+
+  <h2 id="prs">PR queue <small>Pro</small></h2>
+  <p>Pull requests that ask for your review, oldest first, and your own, each with what it needs next. It uses the same GitHub sign-in as Build status, with its own choice of account in <strong>☰ ▸ Account</strong>. Click a pull request to open it.</p>
+
+  <h2 id="meeting">Next meeting <small>Pro</small></h2>
+  <p>A countdown to your next meeting, with a <strong>Join</strong> button for Google Meet, Zoom, Teams and Webex links, and a reminder five minutes before. It reads the calendar you connected in the timebox, so connect one there first.</p>
+
+  <h2 id="unpushed">Unpushed work <small>Pro</small></h2>
+  <p>Repos with work that exists only on this computer: uncommitted changes, commits not pushed, branches never pushed, and stashes.</p>
+  <ul>
+    <li>Add the folders that hold your projects in <strong>☰ ▸ Folders to scan ▸ Add folder…</strong>. Glimmer finds every repo inside them and rescans every five minutes.</li>
+    <li>Right-click a repo to open its folder, or to exclude it or everything in its parent folder.</li>
+    <li>At the timebox's shutdown phase it rescans, and comes forward if something isn't pushed.</li>
+  </ul>
+
+  <h2 id="stretch">Stand up <small>Pro</small></h2>
+  <p>How long you've been sitting, and a quiet reminder to stand up. Choose how often in <strong>☰ ▸ Remind me every</strong>. It waits for a meeting to end and for a focus session's shutdown phase. Five minutes away from the keyboard counts as a break, or press <strong>I stood up</strong>.</p>
+
+  <h2 id="daysend">Day's end <small>Pro</small></h2>
+  <p>A checklist of what's still open at the end of the day: unpushed repos, failing builds, pull requests waiting on you, today's handoff notes, and tomorrow's list.</p>
+  <ul>
+    <li>Set your <strong>Stop time</strong>, and how long before it to start wrapping up, in the ☰ menu.</li>
+    <li>At wrap-up time the panel glimmers and shows what's open.</li>
+    <li><strong>Done for today</strong> closes the day; <strong>Reopen today</strong> brings it back.</li>
+  </ul>
+
+  <h2 id="tomorrow">Tomorrow <small>Pro</small></h2>
+  <p>At the end of the day, write the first few things to do tomorrow in <strong>Add a first step…</strong>; today's handoff next steps are offered with one click. On your next working day the panel becomes <strong>Today, first</strong>. Tick items off as you go. Anything you don't tick carries over when you plan the next day.</p>
+
+  <h2 id="journal">Journal <small>Pro</small></h2>
+  <p>A log of your day that writes itself: finished focus sessions, handoff notes, meetings, builds fixed, work pushed and reviews done. Edit or remove any line, add your own in <strong>Add something you did…</strong>, and keep notes for the day.</p>
+  <ul>
+    <li>Step through days with the arrows. <strong>Copy</strong> puts the day on the clipboard as Markdown, ready for a standup or a timesheet.</li>
+    <li>Each day is a Markdown file, <code>YYYY/YYYY-MM-DD.md</code>, in <code>Documents\Glimmer Journal</code>. Choose another folder, such as an Obsidian vault, in <strong>☰ ▸ Journal folder…</strong>.</li>
+  </ul>
+
+  <h2 id="updates">Updates</h2>
+  <p>Glimmer checks for a new version when it starts and every six hours, and downloads it in the background. The tray menu then offers <strong>Restart to update</strong>; otherwise it installs the next time you quit. Pro includes 12 months of updates from the day you bought it. After that Glimmer keeps working on the version you have, and renewing for $10 a year brings new versions again.</p>
+
+  <h2 id="uninstall">Uninstalling</h2>
+  <p>First remove your license key in <strong>License keys…</strong>, to free that computer's activation. Then, on Windows, open <strong>Settings ▸ Apps ▸ Installed apps</strong>, find Glimmer and choose <strong>Uninstall</strong>. Your settings stay in <code>%APPDATA%\Glimmer</code> in case you reinstall; delete that folder to remove them. Your journal files are yours and are never removed.</p>
+
+  <h2 id="help">Getting help</h2>
+  <p>Write to <a href="mailto:hello@glimmerwidgets.com">hello@glimmerwidgets.com</a> with your Glimmer version and what you expected to happen. Glimmer Pro includes 12 months of support.</p>
+</main>
+
+<footer class="wrap site-foot">
+  <span>&copy; 2026 <a href="https://techniquestassociates.com/">TechniQuest Associates</a></span>
+  <nav aria-label="Footer"><a href="guide.html">Guide</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a><a href="mailto:hello@glimmerwidgets.com">hello@glimmerwidgets.com</a></nav>
+</footer>
+</body>
+</html>

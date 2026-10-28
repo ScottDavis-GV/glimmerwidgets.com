@@ -27,6 +27,7 @@
   <a class="brand" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-grid"/></svg>Glimmer</a>
   <nav aria-label="Site">
     <a href="./">Home</a>
+    <a href="guide.html">Guide</a>
     <a href="privacy.html" aria-current="page">Privacy</a>
     <a href="terms.html">Terms</a>
     <a href="mailto:hello@glimmerwidgets.com">Contact</a>
@@ -35,7 +36,7 @@
 
 <main class="wrap doc">
   <h1>Privacy policy</h1>
-  <p class="updated">Effective 26 October 2026</p>
+  <p class="updated">Effective 27 October 2026</p>
 
   <div class="summary">
     <p><strong>In short:</strong> Glimmer runs on your computer. It talks directly to the services you connect (GitHub, Google Calendar or Microsoft Outlook, and Lemon Squeezy for license keys) and to nothing else. We don't run a server that receives your data, and there is no analytics or telemetry in the app or on this website. Calendar access is read-only, and your calendar never leaves your computer except to come from Google or Microsoft.</p>
@@ -49,7 +50,9 @@
 
   <h3>Build status and PR queue (GitHub)</h3>
   <ul>
-    <li>Glimmer gets a GitHub access token from the GitHub CLI (<code>gh</code>) already signed in on your computer. The token stays in memory and is never written to disk by Glimmer.</li>
+    <li>You sign in through the Glimmer Widgets GitHub App: Glimmer shows a code, you enter it at github.com and approve. The app's permissions are read-only (Actions, Checks, Commit statuses, Metadata and Pull requests), so Glimmer can't change anything on GitHub.</li>
+    <li>The sign-in's refresh token is stored encrypted with your operating system's protected storage; the short-lived access token is held only in memory. <strong>Sign out</strong> in the widget's Account menu forgets it on this computer, and you can revoke it at any time at <a href="https://github.com/settings/apps/authorizations">github.com/settings/apps/authorizations</a>.</li>
+    <li>If the GitHub CLI (<code>gh</code>) is already signed in on your computer, Glimmer can use its accounts instead. Those tokens stay in memory and are never written to disk by Glimmer.</li>
     <li>It asks GitHub's API, directly from your computer, for your repositories' recent workflow runs and for open pull requests that request your review or that you opened.</li>
     <li>It keeps only your choice of GitHub account and panel settings. Build results and pull requests are held in memory while the app runs.</li>
   </ul>
@@ -67,6 +70,27 @@
   <h3>Unpushed work (local git repositories)</h3>
   <ul>
     <li>Glimmer runs read-only git commands in the folders you choose, to find uncommitted changes and commits not pushed. Nothing is sent anywhere; the folder list is kept in Glimmer's settings.</li>
+  </ul>
+
+  <h3>Stand up</h3>
+  <ul>
+    <li>To notice when you've stepped away, Glimmer asks your operating system how long the keyboard and mouse have been idle. It never sees what you type or where you click, and keeps only your reminder settings.</li>
+  </ul>
+
+  <h3>Day's end and Tomorrow</h3>
+  <ul>
+    <li>Day's end gathers what the other widgets already know (unpushed work, failing builds, pull requests waiting on you, handoff notes) into a checklist. It reads nothing new.</li>
+    <li>The few things you write in Tomorrow are kept in Glimmer's folder.</li>
+  </ul>
+
+  <h3>Work journal</h3>
+  <ul>
+    <li>The journal is plain Markdown files, one per day, in a folder you choose (by default <code>Documents\Glimmer Journal</code>). What you write, and the lines Glimmer adds for finished focus sessions, handoffs and breaks, go only into those files. Glimmer never uploads them; if that folder is synced by a service such as OneDrive or Dropbox, that service's own terms apply.</li>
+  </ul>
+
+  <h3>Updates</h3>
+  <ul>
+    <li>The installed app checks Glimmer's public release page on GitHub for a newer version when it starts and every six hours, and downloads one only if your license covers it. The check is an ordinary download from GitHub and carries no license key or personal data.</li>
   </ul>
 
   <h3>License keys (Lemon Squeezy)</h3>
@@ -113,7 +137,7 @@
 
 <footer class="wrap site-foot">
   <span>&copy; 2026 <a href="https://techniquestassociates.com/">TechniQuest Associates</a></span>
-  <nav aria-label="Footer"><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a><a href="mailto:hello@glimmerwidgets.com">hello@glimmerwidgets.com</a></nav>
+  <nav aria-label="Footer"><a href="guide.html">Guide</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a><a href="mailto:hello@glimmerwidgets.com">hello@glimmerwidgets.com</a></nav>
 </footer>
 </body>
 </html>

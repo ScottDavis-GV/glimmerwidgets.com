@@ -204,3 +204,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .doc table { width: 100%; border-collapse: collapse; font-size: 15px; display: block; overflow-x: auto; }
 .doc th, .doc td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
 .doc th { font-weight: 600; color: var(--ink-2); white-space: nowrap; }
+.doc h2[id] { scroll-margin-top: 16px; }
+.doc h2 small { font-size: 14px; font-weight: 500; color: var(--ink-3); }
+.doc ol { margin-top: 12px; padding-left: 22px; display: grid; gap: 6px; }
+.doc .toc { margin-top: 24px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 4px 16px; }
