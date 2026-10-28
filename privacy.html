@@ -39,7 +39,7 @@
   <p class="updated">Effective 28 October 2026</p>
 
   <div class="summary">
-    <p><strong>In short:</strong> Glimmer runs on your computer. It talks directly to the services you connect (GitHub, Google Calendar or Microsoft Outlook, Lemon Squeezy for license keys, and any status pages you choose to watch), plus GitHub for updates, and to nothing else. We don't run a server that receives your data, and there is no analytics or telemetry in the app or on this website. Calendar access is read-only, and your calendar never leaves your computer except to come from Google or Microsoft.</p>
+    <p><strong>In short:</strong> Glimmer runs on your computer. It talks directly to the services you connect (GitHub, Google Calendar or Microsoft Outlook, Lemon Squeezy for license keys, any status pages you choose to watch, and for domains you watch, those sites and their registries), plus GitHub for updates, and to nothing else. We don't run a server that receives your data, and there is no analytics or telemetry in the app or on this website. Calendar access is read-only, and your calendar never leaves your computer except to come from Google or Microsoft.</p>
   </div>
 
   <h2>Who we are</h2>
@@ -91,6 +91,11 @@
   <h3>Service status</h3>
   <ul>
     <li>Glimmer reads the public status summary of each status page you choose to watch, directly from that page, every five minutes. The requests carry no account, cookies or personal data; like any web request, they reveal your IP address to the status page's host. The list of pages is kept in Glimmer's settings.</li>
+  </ul>
+
+  <h3>Expiry watch</h3>
+  <ul>
+    <li>For each domain you add, Glimmer connects to that site to read the expiry date of the certificate it serves, and asks the domain's registry for its public registration record (RDAP), using IANA's public list of registries. It keeps only the dates and the list of domains, in Glimmer's settings.</li>
   </ul>
 
   <h3>Updates</h3>

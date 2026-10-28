@@ -50,6 +50,7 @@
     <li><a href="#tomorrow">Tomorrow</a></li>
     <li><a href="#journal">Journal</a></li>
     <li><a href="#status">Service status</a></li>
+    <li><a href="#expiry">Expiry watch</a></li>
     <li><a href="#updates">Updates</a></li>
     <li><a href="#uninstall">Uninstalling</a></li>
     <li><a href="#help">Getting help</a></li>
@@ -174,6 +175,15 @@
     <li>For a service that isn't listed, choose <strong>Add another status page…</strong> and type its status page's address, such as <code>status.example.com</code>. Glimmer reads pages made with Statuspage or incident.io, which most developer services use; it says so if it can't read one.</li>
     <li>To watch only part of a service, open <strong>☰ ▸ Components to watch</strong> and tick the components you use. Cloudflare starts with just its core services, not its hundreds of data centres.</li>
     <li>It checks every five minutes. An outage on a service you watch turns the tray amber or red and sends a notification.</li>
+  </ul>
+
+  <h2 id="expiry">Expiry watch <small>Pro</small></h2>
+  <p>When the TLS certificates and registrations of your domains run out, soonest first. Click a row to open the site.</p>
+  <ul>
+    <li>Type a domain in the field and press <strong>Add</strong>. Add more in <strong>☰ ▸ Domains ▸ Add domain…</strong>; untick one there to stop watching it. For a certificate on another port, add <code>example.com:8443</code>.</li>
+    <li>A certificate turns amber with 14 days left and red with 3; certificates normally renew themselves about 30 days ahead, so amber means renewal failed. A domain turns amber with 30 days left and red with 7.</li>
+    <li>Each stage sends one notification. Renewing clears it.</li>
+    <li>It checks twice a day, and when you press Refresh. A registration date can't be shown for the few domain endings whose registry doesn't publish one.</li>
   </ul>
 
   <h2 id="updates">Updates</h2>
