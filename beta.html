@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beta testers · Glimmer</title>
+<meta name="description" content="For Glimmer beta testers: installing, what to try, known issues and how to send feedback.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="i-grid" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/></g>
+  </defs>
+</svg>
+
+<header class="wrap top">
+  <a class="brand" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-grid"/></svg>Glimmer</a>
+  <nav aria-label="Site">
+    <a href="./">Home</a>
+    <a href="guide.html">Guide</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="mailto:hello@glimmerwidgets.com">Contact</a>
+  </nav>
+</header>
+
+<main class="wrap doc">
+  <h1>Thank you for testing Glimmer</h1>
+  <p class="updated">For beta testers · updated 29 October 2026</p>
+
+  <div class="summary">
+    <p><strong>The short version:</strong> install Glimmer, add the beta key from your invitation, use it during your normal working days for two or three weeks, and tell us what helps, what annoys you and what breaks, with <strong>Send feedback…</strong> in the tray menu. Nothing is sent to us unless you send it.</p>
+  </div>
+
+  <ul class="toc" aria-label="Contents">
+    <li><a href="#start">Getting started</a></li>
+    <li><a href="#try">What to try</a></li>
+    <li><a href="#known">Known issues</a></li>
+    <li><a href="#feedback">Sending feedback</a></li>
+  </ul>
+
+  <h2 id="start">Getting started</h2>
+  <video controls preload="none" playsinline width="1920" height="1080" poster="media/onboarding-poster.jpg">
+    <source src="media/glimmer-onboarding.mp4" type="video/mp4">
+    <a href="media/glimmer-onboarding.mp4">Download the video</a>.
+  </video>
+  <ol>
+    <li>Download the newest <strong>beta</strong> (marked Pre-release) from the <a href="https://github.com/ScottDavis-GV/glimmer-releases/releases">releases page</a>: <code>Glimmer-Setup-…-x64.exe</code> for most Windows computers, <code>…-arm64.exe</code> for Windows on Arm, or the <code>.AppImage</code> or <code>.deb</code> for Linux.</li>
+    <li>Run it. If Windows says "Windows protected your PC", choose <strong>More info</strong>, check that the publisher reads <strong>Scott Davis</strong>, then <strong>Run anyway</strong>.</li>
+    <li>Right-click the tray icon and choose <strong>Glimmer Pro ▸ Add license key…</strong>. Paste the beta key from your invitation and choose <strong>Add</strong>. It works on one computer.</li>
+    <li>In <strong>Choose widgets</strong>, tick what you'd like to try. You can change it any time from <strong>Widgets ▸ Choose widgets…</strong></li>
+    <li>Make sure <strong>Settings ▸ Get beta versions</strong> is ticked, so each new beta reaches you by itself.</li>
+  </ol>
+  <p>The <a href="guide.html">guide</a> explains every widget, and each panel's ☰ menu has <strong>How it works…</strong></p>
+
+  <h2 id="try">What to try</h2>
+  <p>Use Glimmer as you'd normally work; these are suggestions, a week at a time.</p>
+  <h3>Week 1: focus and the dock</h3>
+  <ul>
+    <li>Run a few <strong>timebox</strong> sessions a day, and write the handoff note at the end. Is the shutdown warning early enough? Too pushy?</li>
+    <li>Arrange the panels: drag them out, use the house button, drag one between two others, try another corner in <strong>Settings ▸ Home</strong>.</li>
+    <li>Turn on <strong>Stand up</strong> and see whether its reminders come at sensible times.</li>
+  </ul>
+  <h3>Week 2: your work</h3>
+  <ul>
+    <li>Sign in to GitHub in <strong>Build status</strong> and the <strong>PR queue</strong>. Do the notifications come at the right moments?</li>
+    <li>Point <strong>Unpushed work</strong> at your project folders. Does it find everything, and nothing it shouldn't?</li>
+    <li>Set a stop time in <strong>Day's end</strong>, and write tomorrow's first steps in <strong>Tomorrow</strong>.</li>
+  </ul>
+  <h3>Week 3: the record of your work</h3>
+  <ul>
+    <li>Let the <strong>Journal</strong> run all week, then open <strong>☰ ▸ Reports ▸ This week's report</strong>. Would you send it? What's missing?</li>
+    <li>Try <strong>Service status</strong> with the services you rely on, and <strong>Expiry watch</strong> with a domain you look after.</li>
+    <li>Adjust <strong>☰ ▸ Notifications</strong> for each widget until Glimmer is quiet enough.</li>
+  </ul>
+
+  <h2 id="known">Known issues</h2>
+  <ul>
+    <li><strong>Calendars:</strong> connecting Google Calendar or Outlook doesn't work in this beta yet. Use the timebox's <strong>☰ ▸ Timebox calendar ▸ Sample week</strong> to see how calendar-aware sessions and Next meeting behave; real calendars come in a later beta.</li>
+    <li><strong>SmartScreen and antivirus:</strong> Glimmer is new, so Windows and some antivirus may be cautious about it until it builds a reputation. The publisher must read Scott Davis.</li>
+    <li><strong>Linux:</strong> on GNOME the tray icon needs the AppIndicator extension.</li>
+    <li><strong>macOS</strong> isn't available yet.</li>
+  </ul>
+
+  <h2 id="feedback">Sending feedback</h2>
+  <p>Choose <strong>Send feedback…</strong> in the tray menu or in any panel's ☰ menu. It opens an email to <a href="mailto:hello@glimmerwidgets.com">hello@glimmerwidgets.com</a> in your own mail program, with your Glimmer version, Windows version and the widgets you run filled in. Glimmer doesn't send anything itself, and there's no telemetry.</p>
+  <ul>
+    <li>Say what happened and what you expected. A screenshot helps (<kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>).</li>
+    <li>Small annoyances are as useful as bugs: a reminder at the wrong moment, a label that confused you, a panel in the way.</li>
+    <li>Ideas are welcome too, including widgets you'd want.</li>
+  </ul>
+</main>
+
+<footer class="wrap site-foot">
+  <span>&copy; 2026 <a href="https://techniquestassociates.com/">TechniQuest Associates</a></span>
+  <nav aria-label="Footer"><a href="guide.html">Guide</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a><a href="mailto:hello@glimmerwidgets.com">hello@glimmerwidgets.com</a></nav>
+</footer>
+</body>
+</html>

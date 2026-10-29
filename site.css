@@ -215,3 +215,4 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .watch p { margin-top: 10px; color: var(--ink-2); max-width: 46em; }
 .watch .note { font-size: 15px; color: var(--ink-3); }
 .watch video, .doc video { display: block; width: 100%; height: auto; margin-top: 18px; border-radius: 10px; background: #0d1117; box-shadow: 0 12px 36px rgba(20, 30, 60, .18); }
+.doc kbd { font: 13px var(--font-mono); border: 1px solid var(--rule); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--surface); }
