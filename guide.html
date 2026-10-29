@@ -76,7 +76,7 @@
   <h3>Windows</h3>
   <ol>
     <li>Run the Glimmer installer. It installs for your account only and needs no administrator rights.</li>
-    <li>While Glimmer is in beta its installer isn't code-signed yet, so Windows may say "Windows protected your PC". Choose <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+    <li>Glimmer is signed by its publisher, <strong>Scott Davis</strong>. Because it's new, Windows may still say "Windows protected your PC". Choose <strong>More info</strong>, check that the publisher reads Scott Davis, then choose <strong>Run anyway</strong>.</li>
     <li>Glimmer starts and puts its icon in the tray. If you can't see it, open the <strong>^</strong> next to the clock and drag the icon onto the taskbar.</li>
   </ol>
   <h3>Linux</h3>
@@ -86,7 +86,7 @@
   <p>Each widget is a small panel that floats over your other windows and sizes itself to its content. Drag a panel by its title bar to move it; it remembers where you left it.</p>
   <p>The buttons in a panel's title bar, from the right:</p>
   <ul>
-    <li><strong>Close</strong> hides the panel. The widget keeps working; turn it back on from the tray.</li>
+    <li><strong>Close</strong> hides the panel, and it stays hidden after a restart. The widget keeps working; show it again from the tray's <strong>Widgets</strong> menu.</li>
     <li><strong>Collapse</strong> shrinks the panel to a one-line summary, such as "1 failing" or "Sitting 42 min".</li>
     <li><strong>Home</strong> sends the panel to the <a href="#home">home dock</a>.</li>
     <li><strong>Pin</strong> keeps the panel on top of other windows.</li>
@@ -186,6 +186,14 @@
     <li>Step through days with the arrows. <strong>Copy</strong> puts the day on the clipboard as Markdown, ready for a standup or a timesheet.</li>
     <li>Each day is a Markdown file, <code>YYYY/YYYY-MM-DD.md</code>, in <code>Documents\Glimmer Journal</code>. Choose another folder, such as an Obsidian vault, in <strong>☰ ▸ Journal folder…</strong>.</li>
   </ul>
+  <h3>Weekly and review reports</h3>
+  <p>The journal turns your days into reports you can edit and send. Open them from <strong>☰ ▸ Reports</strong>.</p>
+  <ul>
+    <li><strong>This week's report</strong> (or last week's) gathers the week: focus time by project with what you finished, highlights, your own items, meetings, reviews and fixes, notes, and what's next from Tomorrow. It's saved as <code>Reports/Week-2026-W44.md</code> in your journal folder and opened in your Markdown editor. Edit it freely: it's built once, and only <strong>Rebuild</strong> replaces it.</li>
+    <li><strong>Email this week's report…</strong> opens a draft to your supervisor in your mail program. The first time, the journal asks for their address. The report is also put on the clipboard; a very long one asks you to paste it into the draft. Glimmer never sends email itself.</li>
+    <li><strong>Review report</strong> covers your review year so far, or the last one, for performance-review input. It leads with highlights Glimmer picks (your biggest projects, and achievements you or your handoffs wrote down), then projects, month by month, and totals.</li>
+    <li>Set when your review year starts, and optionally the month review input is due, in <strong>☰ ▸ Reports</strong>. On Fridays from 3 PM, and two weeks before review input is due, the journal panel reminds you the report is ready.</li>
+  </ul>
 
   <h2 id="status">Service status <small>Pro</small></h2>
   <p>The status pages of the services you depend on, worst first. Click a row to open its incident, or the status page.</p>
@@ -206,7 +214,12 @@
   </ul>
 
   <h2 id="updates">Updates</h2>
-  <p>Glimmer checks for a new version when it starts and every six hours, and downloads it in the background. The tray menu then offers <strong>Restart to update</strong>; otherwise it installs the next time you quit. Pro includes 12 months of updates from the day you bought it. After that Glimmer keeps working on the version you have, and renewing for $10 a year brings new versions again.</p>
+  <p>Glimmer checks for a new version when it starts and every hour, and downloads it in the background. The tray menu then offers <strong>Restart to update</strong>; otherwise it installs the next time you quit. To check straight away, choose <strong>Settings ▸ Check for updates</strong>; the version you have is at the top of the same menu.</p>
+  <ul>
+    <li><strong>Beta versions:</strong> tick <strong>Settings ▸ Get beta versions</strong> to get each beta as well as each release. Untick it to stay on releases only.</li>
+    <li><strong>If an update can't download</strong>, for example because antivirus blocked it, the tray menu offers to download it from the releases page instead.</li>
+    <li>Pro includes 12 months of updates from the day you bought it. After that Glimmer keeps working on the version you have, and renewing for $10 a year brings new versions again.</li>
+  </ul>
 
   <h2 id="uninstall">Uninstalling</h2>
   <p>First remove your license key in <strong>License keys…</strong>, to free that computer's activation. Then, on Windows, open <strong>Settings ▸ Apps ▸ Installed apps</strong>, find Glimmer and choose <strong>Uninstall</strong>. Your settings stay in <code>%APPDATA%\Glimmer</code> in case you reinstall; delete that folder to remove them. Your journal files are yours and are never removed.</p>
