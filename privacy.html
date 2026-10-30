@@ -39,7 +39,7 @@
   <p class="updated">Effective 28 October 2026</p>
 
   <div class="summary">
-    <p><strong>In short:</strong> Glimmer runs on your computer. It talks directly to the services you connect (GitHub, GitLab or Bitbucket, Google Calendar or Microsoft Outlook, Lemon Squeezy for license keys, any status pages you choose to watch, and for domains you watch, those sites and their registries), plus GitHub for updates, and to nothing else. We don't run a server that receives your data, and there is no analytics or telemetry in the app or on this website. Calendar access is read-only, and your calendar never leaves your computer except to come from Google or Microsoft.</p>
+    <p><strong>In short:</strong> Glimmer runs on your computer. It talks directly to the services you connect (GitHub, GitLab, Bitbucket or TeamCity, Google Calendar or Microsoft Outlook, Lemon Squeezy for license keys, any status pages you choose to watch, and for domains you watch, those sites and their registries), plus GitHub for updates, and to nothing else. We don't run a server that receives your data, and there is no analytics or telemetry in the app or on this website. Calendar access is read-only, and your calendar never leaves your computer except to come from Google or Microsoft.</p>
   </div>
 
   <h2>Who we are</h2>
@@ -48,14 +48,14 @@
   <h2>What the Glimmer app accesses</h2>
   <p>Glimmer is a desktop app made of widgets. Each one only reads what it needs, and only once you've turned it on or connected the service it uses. Everything it keeps is stored in its own folder on your computer (<code>%APPDATA%\Glimmer</code> on Windows, <code>~/Library/Application Support/Glimmer</code> on macOS, <code>~/.config/Glimmer</code> on Linux).</p>
 
-  <h3>Build status and PR queue (GitHub, GitLab, Bitbucket)</h3>
+  <h3>Build status and PR queue (GitHub, GitLab, Bitbucket, TeamCity)</h3>
   <ul>
     <li>You sign in through the Glimmer Widgets GitHub App: Glimmer shows a code, you enter it at github.com and approve. The app's permissions are read-only (Actions, Checks, Commit statuses, Metadata and Pull requests), so Glimmer can't change anything on GitHub.</li>
     <li>The sign-in's refresh token is stored encrypted with your operating system's protected storage; the short-lived access token is held only in memory. <strong>Sign out</strong> in the widget's Account menu forgets it on this computer, and you can revoke it at any time at <a href="https://github.com/settings/apps/authorizations">github.com/settings/apps/authorizations</a>.</li>
     <li>If the GitHub CLI (<code>gh</code>) is already signed in on your computer, Glimmer can use its accounts instead. Those tokens stay in memory and are never written to disk by Glimmer.</li>
     <li>It asks GitHub's API, directly from your computer, for your repositories' recent workflow runs and for open pull requests that request your review or that you opened.</li>
     <li>It keeps only your choice of GitHub account and panel settings. Build results and pull requests are held in memory while the app runs.</li>
-    <li>For GitLab and Bitbucket, in the cloud or on your company's own server, you paste an access token you made there, with read permissions only. Glimmer checks it with that server, then keeps it on your computer, encrypted with Windows' own protection (or the macOS Keychain or Linux keyring), with the server's address and your account name. It's sent only to that server. <strong>Remove account</strong> in either widget's Account menu deletes it; revoke the token on the server to end its access entirely.</li>
+    <li>For GitLab, Bitbucket and TeamCity, in the cloud or on your company's own server, you paste an access token you made there, with read permissions only. Glimmer checks it with that server, then keeps it on your computer, encrypted with Windows' own protection (or the macOS Keychain or Linux keyring), with the server's address and your account name. It's sent only to that server. <strong>Remove account</strong> in either widget's Account menu deletes it; revoke the token on the server to end its access entirely.</li>
   </ul>
 
   <h3>Timebox and Next meeting (Google Calendar or Microsoft Outlook)</h3>
