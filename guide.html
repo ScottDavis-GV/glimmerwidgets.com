@@ -144,7 +144,7 @@
   <p>In <strong>☰ ▸ Timebox calendar</strong>, connect Google Calendar or Microsoft Outlook; access is read-only. Then choose which calendars are <strong>hard obligations</strong>, which end a session in time, and which are <strong>soft commitments</strong>, which only warn. <strong>Sample week</strong> lets you try it without connecting anything. Next meeting reads the same calendar.</p>
 
   <h2 id="builds">Build status <small>Pro</small></h2>
-  <p>Your repositories' latest builds, worst first: GitHub Actions, GitLab pipelines, Bitbucket Pipelines, TeamCity and Jenkins builds, and the build statuses Bamboo reports to a Bitbucket server. Click a row to open the run.</p>
+  <p>Your repositories' latest builds, worst first: GitHub Actions, GitLab pipelines, Bitbucket Pipelines, Azure Pipelines, TeamCity and Jenkins builds, and the build statuses Bamboo reports to a Bitbucket server. Click a row to open the run.</p>
   <h3>GitHub</h3>
   <ol>
     <li>Choose <strong>Sign in to GitHub…</strong> in the panel, or <strong>☰ ▸ Account ▸ Add GitHub account…</strong>.</li>
@@ -152,25 +152,26 @@
     <li>The panel fills in by itself and checks again every 60 seconds.</li>
   </ol>
   <p>If you use the GitHub CLI (<code>gh</code>), its signed-in accounts are listed too. <strong>Sign out</strong> in the same menu forgets an account on this computer.</p>
-  <h3 id="gitlab-bitbucket">GitLab, Bitbucket, TeamCity and Jenkins, in the cloud or on your company's server</h3>
+  <h3 id="gitlab-bitbucket">GitLab, Bitbucket, Azure DevOps, TeamCity and Jenkins, in the cloud or on your company's server</h3>
   <ol>
-    <li>Choose <strong>Other services…</strong> in the panel, or <strong>☰ ▸ Account ▸ Add GitLab, Bitbucket, TeamCity or Jenkins account…</strong>.</li>
+    <li>Choose <strong>Other services…</strong> in the panel, or <strong>☰ ▸ Account ▸ Add GitLab, Bitbucket, Azure DevOps, TeamCity or Jenkins account…</strong>.</li>
     <li>Pick the service. For a company server, type its address, such as <code>gitlab.example.com</code>; leave it blank for gitlab.com.</li>
     <li>Choose <strong>Make a token…</strong> to open the page where the service makes access tokens, make one, and paste it:
       <ul>
         <li><strong>GitLab:</strong> a personal access token with the <code>read_api</code> scope (the page opens with it filled in).</li>
         <li><strong>Bitbucket Cloud:</strong> your Atlassian account email, and an API token with the Bitbucket scopes <code>read:user</code>, <code>read:repository</code>, <code>read:pipeline</code> and <code>read:pullrequest</code>.</li>
         <li><strong>Bitbucket Data Center:</strong> an HTTP access token with Repository read permission, from your profile's <strong>Manage account ▸ HTTP access tokens</strong>.</li>
+        <li><strong>Azure DevOps:</strong> your organization's address, such as <code>dev.azure.com/acme</code> (or your Azure DevOps Server collection's), and a personal access token with the read scopes <strong>Build</strong>, <strong>Code</strong>, and <strong>Project and Team</strong>.</li>
         <li><strong>TeamCity:</strong> an access token from your profile's <strong>Access Tokens</strong>. If your TeamCity lets you limit its permissions, view permissions are enough.</li>
         <li><strong>Jenkins:</strong> your Jenkins user ID and an API token: click your name at the top right, then <strong>Security</strong> (or <strong>Configure</strong> on older Jenkins) ▸ <strong>API Token</strong> ▸ <strong>Add new token</strong>. On a big server, give your view's or folder's address, such as <code>jenkins.example.com/view/Payments</code>, to see only its jobs.</li>
       </ul>
     </li>
     <li>Choose <strong>Connect</strong>. Glimmer checks the token before saving it, encrypted on this computer.</li>
   </ol>
-  <p>You add an account once: it stays after a restart, and Build status and the PR queue both use it. Untick it in either widget's <strong>☰ ▸ Account</strong> to leave it out there, or use <strong>Remove account</strong> to forget it. Glimmer only reads. On a company server it shows the repositories you've looked at lately. TeamCity shows one line per project, from the projects you chose to see on TeamCity's own overview page, and only in Build status, since it has no pull requests. Jenkins shows one line per job, and one per multibranch project, from its main branch; it's also in Build status only. Bitbucket Cloud limits how often apps may ask, so with many repositories its builds update every few minutes rather than every minute. If one account stops working, the panel says which, and the others keep updating.</p>
+  <p>You add an account once: it stays after a restart, and Build status and the PR queue both use it. Untick it in either widget's <strong>☰ ▸ Account</strong> to leave it out there, or use <strong>Remove account</strong> to forget it. Glimmer only reads. On a company server it shows the repositories you've looked at lately. TeamCity shows one line per project, from the projects you chose to see on TeamCity's own overview page, and only in Build status, since it has no pull requests. Azure DevOps shows one line per repository, from the 30 projects changed most recently, and its pull requests in the PR queue. Jenkins shows one line per job, and one per multibranch project, from its main branch; it's also in Build status only. Bitbucket Cloud limits how often apps may ask, so with many repositories its builds update every few minutes rather than every minute. If one account stops working, the panel says which, and the others keep updating.</p>
 
   <h2 id="prs">PR queue <small>Pro</small></h2>
-  <p>Pull requests that ask for your review, oldest first, and your own, each with what it needs next. It uses the same GitHub sign-in as Build status, with its own choice of account in <strong>☰ ▸ Account</strong>, and the same <a href="#gitlab-bitbucket">GitLab and Bitbucket accounts</a>: GitLab merge requests show as <code>api!12</code>. Click a pull request to open it.</p>
+  <p>Pull requests that ask for your review, oldest first, and your own, each with what it needs next. It uses the same GitHub sign-in as Build status, with its own choice of account in <strong>☰ ▸ Account</strong>, and the same <a href="#gitlab-bitbucket">GitLab, Bitbucket and Azure DevOps accounts</a>: GitLab merge requests and Azure DevOps pull requests show as <code>api!12</code>. Click a pull request to open it.</p>
 
   <h2 id="meeting">Next meeting <small>Pro</small></h2>
   <p>A countdown to your next meeting, with a <strong>Join</strong> button for Google Meet, Zoom, Teams and Webex links, and a reminder five minutes before. It reads the calendar you connected in the timebox, so connect one there first.</p>
