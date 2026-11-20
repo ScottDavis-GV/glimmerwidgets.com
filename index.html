@@ -46,7 +46,7 @@
     <h1 id="hero-title">Know what's red, what's waiting on you, and when to <em>stop</em>.</h1>
     <p class="lede">Glimmer puts small panels at the edge of your screen for developers who lose track of time once they're deep in the work: build status, your pull request queue, a focus timer that respects your calendar, your next meeting, the git work you haven't pushed yet, a nudge to stand up, a clean end to the day, a journal of what you did, the status of the services you depend on, and when your domains and certificates run out. The timebox is free; Glimmer Pro adds everything else.</p>
     <div class="facts"><span>Windows and Linux; macOS later</span><span>No account of ours</span><span>Works offline</span></div>
-    <div class="cta"><a class="btn" href="mailto:hello@glimmerwidgets.com?subject=Glimmer%20beta">Ask to join the beta</a><a class="note" href="#watch">Watch the 4-minute tour</a><a class="note" href="#pricing">Timebox free · Glimmer Pro $20</a></div>
+    <div class="cta"><a class="btn" href="mailto:hello@glimmerwidgets.com?subject=Glimmer%20beta">Ask to join the beta</a><a class="note" href="#watch">Watch the 4-minute tour</a><a class="note" href="#pricing">Timebox free · Glimmer Pro <span data-price="pro">$20</span></a></div>
   </div>
 
   <div class="desk" role="img" aria-label="Three Glimmer panels on a desktop: build status with one failing build, a timebox counting down to 12:15 PM before a 1:00 PM lecture, and unpushed work listing two repos, above a taskbar whose single tray icon is red because a build is failing.">
@@ -274,15 +274,46 @@
     </div>
   </section>
 
+  <!-- Prices and Payment Links are set in store.js, in its STORE block at the top.
+       The prices written in this section are only what shows without JavaScript;
+       store.js replaces every [data-price] with its own figures. -->
   <section class="together" id="pricing" aria-labelledby="pr">
     <span class="eyebrow">Pricing</span>
     <h2 id="pr">The timebox is free. Glimmer Pro is everything else.</h2>
-    <div class="flows">
-      <div class="flow"><span class="when">Free</span><p><strong>Timebox</strong>, with every feature, on as many computers as you like. No key, no trial, no time limit.</p></div>
-      <div class="flow"><span class="when">Glimmer Pro · $20 once</span><p>Build status, the PR queue, next meeting, unpushed work, stand up, Day's end, Tomorrow, the journal, service status, expiry watch, and every widget we add, on up to three computers. Includes 12 months of updates and support. <strong>The first 100 buyers pay $10</strong> with the code FOUNDER.</p></div>
-      <div class="flow"><span class="when">After the first year · $10 a year, if you want it</span><p>Renew for another 12 months of updates, new widgets and support. If you don't, nothing turns off: Pro keeps working on the version you have.</p></div>
+    <p class="store-closed" id="store-closed">Glimmer Pro isn't on sale yet, so every widget is on for everyone in the beta. These are the prices it will launch at.</p>
+    <div class="flows plans">
+      <div class="flow plan">
+        <span class="when">Free</span>
+        <p class="price">$0</p>
+        <p><strong>Timebox</strong>, with every feature, on as many computers as you like. No key, no trial needed, no time limit.</p>
+      </div>
+      <div class="flow plan">
+        <span class="when">Glimmer Pro</span>
+        <p class="price"><span data-price="pro">$20</span> <span class="per">once</span></p>
+        <p>Build status, the PR queue, next meeting, unpushed work, stand up, Day's end, Tomorrow, the journal, service status, expiry watch, and every widget we add, on up to three computers. Includes 12 months of updates and support.</p>
+        <a class="btn" data-buy="pro" href="mailto:hello@glimmerwidgets.com?subject=Glimmer%20beta">Ask to join the beta</a>
+      </div>
+      <div class="flow plan founder">
+        <span class="when">Founder · the first <span data-founder-limit>100</span> buyers</span>
+        <p class="price"><span data-price="founder">$10</span> <span class="per">once</span></p>
+        <p>Glimmer Pro at the Founder price: the same widgets, three computers and 12 months of updates, with ordinary renewals after the first year.</p>
+        <p class="left" id="founder-left" role="status" hidden></p>
+        <a class="btn" data-buy="founder" href="mailto:hello@glimmerwidgets.com?subject=Glimmer%20beta">Ask to join the beta</a>
+      </div>
     </div>
-    <p class="foot">Try every Pro widget free for 14 days with a trial key. If Glimmer Pro isn't right for you, ask for a refund within 30 days. Prices in US dollars.</p>
+    <div class="renew" id="renew">
+      <div>
+        <h3>After the first year · <span data-price="renewal">$10</span> a year, if you want it</h3>
+        <p>Renew for another 12 months of updates, new widgets and support. If you don't, nothing turns off: Pro keeps working on the version you have.</p>
+      </div>
+      <ol>
+        <li>In Glimmer, open <strong>Settings ▸ License keys…</strong> and copy your license ID, shown as <strong>Glimmer Pro · GL-…</strong></li>
+        <li>Choose <strong>Renew</strong> and paste the ID where the checkout asks for your license ID.</li>
+        <li>Back in <strong>License keys</strong>, choose <strong>Check for updated key</strong> on each computer you use.</li>
+      </ol>
+      <a class="btn quiet" data-buy="renewal" href="mailto:hello@glimmerwidgets.com?subject=Glimmer%20beta">Ask to join the beta</a>
+    </div>
+    <p class="foot">Try every Pro widget free for 14 days: in Glimmer's <strong>License keys</strong> window, enter your email under <strong>Try Glimmer Pro free</strong>. If Glimmer Pro isn't right for you, ask for a refund within 30 days. Prices in US dollars. Payments are taken by Stripe; your key is shown on the page after you pay.</p>
   </section>
 
   <section class="facts-grid" aria-label="Details">
@@ -309,7 +340,7 @@
     <div>
       <h3>Private by design</h3>
       <ul>
-        <li>No server of ours; it talks only to the services you connect</li>
+        <li>Your data goes only to the services you connect; our key service sees only license keys</li>
         <li>Calendar access is read-only</li>
         <li>Sign-ins encrypted with your operating system's own storage</li>
         <li>Calendar details never leave your computer</li>
@@ -362,5 +393,6 @@
   <nav aria-label="Footer"><a href="guide.html">Guide</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms</a><a href="mailto:hello@glimmerwidgets.com">hello@glimmerwidgets.com</a></nav>
 </footer>
 
+<script src="store.js" defer></script>
 </body>
 </html>

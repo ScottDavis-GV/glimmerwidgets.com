@@ -36,10 +36,10 @@
 
 <main class="wrap doc">
   <h1>Privacy policy</h1>
-  <p class="updated">Effective 28 October 2026</p>
+  <p class="updated">Effective 20 November 2026</p>
 
   <div class="summary">
-    <p><strong>In short:</strong> Glimmer runs on your computer. It talks directly to the services you connect (GitHub or another code host or CI service you add, Google Calendar or Microsoft Outlook, Lemon Squeezy for license keys, any status pages you choose to watch, and for domains you watch, those sites and their registries), plus GitHub for updates, and to nothing else. We don't run a server that receives your data, and there is no analytics or telemetry in the app or on this website. Calendar access is read-only, and your calendar never leaves your computer except to come from Google or Microsoft.</p>
+    <p><strong>In short:</strong> Glimmer runs on your computer. It talks directly to the services you connect (GitHub or another code host or CI service you add, Google Calendar or Microsoft Outlook, any status pages you choose to watch, and for domains you watch, those sites and their registries), plus GitHub for updates and our license key service, TechniQuest Keys, for Glimmer Pro keys, and to nothing else. The key service is told only about your license, never about your work, and there is no analytics or telemetry in the app or on this website. Payments are taken by Stripe. Calendar access is read-only, and your calendar never leaves your computer except to come from Google or Microsoft.</p>
   </div>
 
   <h2>Who we are</h2>
@@ -105,16 +105,20 @@
     <li>The installed app checks Glimmer's public release page on GitHub for a newer version when it starts, every hour, and when you choose Check for updates, and downloads one only if your license covers it. The check is an ordinary download from GitHub and carries no license key or personal data.</li>
   </ul>
 
-  <h3>License keys (Lemon Squeezy)</h3>
+  <h3>License keys (TechniQuest Keys)</h3>
   <ul>
-    <li>When you add a license key, Glimmer sends the key and your computer's name to Lemon Squeezy's license service, so the key can be limited to a few computers and you can see where it's in use. About once a week it re-checks the key, sending the key and the activation's ID. Removing a key sends the same to free the activation.</li>
+    <li>Glimmer Pro keys come from TechniQuest Keys, our own license key service, which runs on Cloudflare at <code>keys.glimmerwidgets.com</code>. Glimmer checks a key on your computer; it contacts the service only to add a key, to renew the key's certificate (quietly, about once a week while you're online), when you choose <strong>Check for updated key</strong>, to start a trial, and to remove a key.</li>
+    <li>Each of those requests sends the key and a one-way code for your computer: a SHA-256 hash of Glimmer's name and your operating system's machine ID. Never your computer's name, and never the machine ID itself. The service uses the code to keep a key to three computers (one for a trial or beta key).</li>
+    <li>Starting a trial sends the email address you enter, with that computer code instead of a key. The address is kept for support only and never goes in the key. The service keeps a record of each trial, so a computer can't start a second one.</li>
+    <li>To limit how many trials one internet connection can start, the service also keeps, with each trial, a code made from your IP address with a secret key. Without that key the code can't be turned back into the address.</li>
+    <li>Like any web request, these reveal your IP address to Cloudflare, which hosts the service. <!-- CHECK: whether Cloudflare's or the Worker's request logs keep IP addresses, and for how long. --></li>
     <li>Keys are stored encrypted with your operating system's protected storage.</li>
   </ul>
 
   <h3>What Glimmer never does</h3>
   <ul>
     <li>No analytics, telemetry, crash reporting or advertising.</li>
-    <li>No server of ours: your data isn't sent to us.</li>
+    <li>Your data isn't sent to us: our only server is the license key service above, which is told only about your license.</li>
     <li>Nothing is sold, shared with or shown to anyone else.</li>
   </ul>
 
@@ -128,15 +132,18 @@
   </ul>
 
   <h2>Buying Glimmer</h2>
-  <p>Purchases are handled by Lemon Squeezy, which acts as the merchant of record: it takes your payment, handles tax and sends the receipt and license key. Lemon Squeezy collects the details needed for that, such as your name, email address, billing country and payment details, under its own <a href="https://www.lemonsqueezy.com/privacy">privacy policy</a>. We never see your payment card. Lemon Squeezy shares your order with us (your name, email address, what you bought and your license keys), which we use to support you, handle refunds and, if you opt in at checkout, send product news.</p>
+  <!-- CHECK: whether payments go through Stripe Managed Payments (Stripe as merchant of record, handling tax) or an ordinary Stripe account; say so here and in the terms once it is settled. -->
+  <p>Payments are taken by Stripe, on Stripe's own checkout page. Stripe collects the details needed to take your payment, such as your name, email address, billing address and card details, under its own <a href="https://stripe.com/privacy">privacy policy</a>, and sends the receipt. We never see your payment card.</p>
+  <p>When you pay, Stripe tells TechniQuest Keys your name, your email address, what you bought and a reference for the payment. The service makes your license from that: your key carries the name you gave at checkout (Glimmer shows it as "Licensed to …"), and the service keeps the license with your email address, what you bought, when your updates end, the payment reference and the computer codes it's active on. We use these to show you your key, to apply renewals, to support you and to handle refunds. For a renewal, the license ID you type at checkout goes to Stripe and the service with your payment.</p>
+  <p>Your key is shown once, on the page you return to after paying, for a day. It is not emailed.</p>
 
   <h2>This website</h2>
-  <p>glimmerwidgets.com has no cookies, analytics, tracking or third-party fonts. Like any web host, our host may record standard server logs, such as your IP address and the pages requested, for security and reliability. If you email us, we keep the conversation to answer you.</p>
+  <p>glimmerwidgets.com has no cookies, analytics, tracking or third-party fonts. Like any web host, our host may record standard server logs, such as your IP address and the pages requested, for security and reliability. The pricing section asks the license key service how many Founder places are left, and the page you return to after paying asks it for your key with Stripe's checkout ID from its address; neither sends anything else about you. If you email us, we keep the conversation to answer you.</p>
 
   <h2>Keeping and deleting your data</h2>
   <ul>
     <li>Data on your computer stays until you remove it: disconnect a calendar, remove a license key, or delete Glimmer's folder after uninstalling.</li>
-    <li>To have us delete your order details or emails, write to <a href="mailto:privacy@glimmerwidgets.com">privacy@glimmerwidgets.com</a>. We'll do so unless we have to keep them for tax or legal reasons, and Lemon Squeezy keeps its own records as merchant of record.</li>
+    <li>To have us delete your order details or emails, write to <a href="mailto:privacy@glimmerwidgets.com">privacy@glimmerwidgets.com</a>. We'll do so unless we have to keep them for tax or legal reasons, or to keep your license working, and Stripe keeps its own records of your payment. <!-- CHECK: how long TechniQuest Keys keeps license, order and trial records; its ADR 023 keeps trial records for good, for the one-trial-per-computer rule. --></li>
     <li>Depending on where you live, you may have rights to access, correct, delete or export your personal data, or to object to its use. Write to us and we'll help.</li>
   </ul>
 

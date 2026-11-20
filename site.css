@@ -216,3 +216,41 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .watch .note { font-size: 15px; color: var(--ink-3); }
 .watch video, .doc video { display: block; width: 100%; height: auto; margin-top: 18px; border-radius: 10px; background: #0d1117; box-shadow: 0 12px 36px rgba(20, 30, 60, .18); }
 .doc kbd { font: 13px var(--font-mono); border: 1px solid var(--rule); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--surface); }
+
+/* ---------- Pricing: plans, the Founder count and renewing (store.js) ---------- */
+.store-closed { margin-top: 14px; padding: 10px 14px; border-radius: 6px; background: var(--accent-soft); color: var(--ink); font-size: 16px; max-width: 46em; }
+.store-closed[hidden] { display: none; }
+.plans .plan { display: flex; flex-direction: column; gap: 8px; }
+.plan > .btn, .plan > .left { margin-top: auto; }
+.plan > .left + .btn { margin-top: 0; }
+.plan .price { font: 700 30px/1.1 var(--font-display); color: var(--ink); }
+.plan .price .per { font: 500 14px var(--font-body); color: var(--ink-3); }
+.plan .btn { align-self: flex-start; text-align: center; }
+.plan .left { font: 500 13px/1.4 var(--font-mono); color: var(--ok-text); }
+.plan .left.sold-out { color: var(--danger-text); }
+.founder { border-color: var(--accent); }
+.btn.quiet { background: var(--surface); color: var(--accent); border: 1px solid var(--accent); }
+.btn.disabled { background: var(--bar); color: var(--ink-3); border: 1px solid var(--rule); cursor: not-allowed; filter: none; }
+.renew { margin-top: 16px; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 12px 28px; align-items: start; }
+.renew h3 { font-size: 17px; font-weight: 700; }
+.renew p, .renew ol { color: var(--ink-2); font-size: 16px; }
+.renew p { margin-top: 6px; }
+.renew ol { margin: 0; padding-left: 20px; display: grid; gap: 6px; grid-row: span 2; }
+.renew .btn { justify-self: start; }
+@media (max-width: 860px) {
+  .renew { grid-template-columns: minmax(0, 1fr); }
+  .renew ol { grid-row: auto; }
+}
+
+/* ---------- Thank-you page (thanks.html) ---------- */
+.thanks .key-status { margin-top: 14px; font-size: 18px; color: var(--ink); }
+.thanks .key-status[hidden] { display: none; }
+#licenses { display: grid; gap: 16px; margin-top: 20px; }
+.key-card { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 18px 20px; display: grid; gap: 10px; }
+.doc .key-card h2 { margin-top: 0; }
+.doc .key-card p { margin-top: 0; }
+.key-id { font: 500 14px/1.4 var(--font-mono); color: var(--ink-2); }
+.key-label { font-size: 14px; color: var(--ink-3); }
+.key-text { width: 100%; min-width: 0; resize: none; font: 13px/1.5 var(--font-mono); color: var(--ink); background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; overflow-wrap: anywhere; word-break: break-all; }
+.key-text:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.key-card .btn { justify-self: start; cursor: pointer; border: 0; }
