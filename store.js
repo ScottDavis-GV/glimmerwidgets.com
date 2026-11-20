@@ -36,7 +36,7 @@ const STORE = {
     founder: '',
     renewal: '',
   },
-  service: 'https://keys.glimmerwidgets.com',
+  service: 'https://keys.techniquestassociates.com',
   product: 'glimmer',
   founderLimit: 100,
 };

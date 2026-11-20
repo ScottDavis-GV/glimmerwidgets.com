@@ -107,7 +107,7 @@
 
   <h3>License keys (TechniQuest Keys)</h3>
   <ul>
-    <li>Glimmer Pro keys come from TechniQuest Keys, our own license key service, which runs on Cloudflare at <code>keys.glimmerwidgets.com</code>. Glimmer checks a key on your computer; it contacts the service only to add a key, to renew the key's certificate (quietly, about once a week while you're online), when you choose <strong>Check for updated key</strong>, to start a trial, and to remove a key.</li>
+    <li>Glimmer Pro keys come from TechniQuest Keys, our own license key service, which runs on Cloudflare at <code>keys.techniquestassociates.com</code>. Glimmer checks a key on your computer; it contacts the service only to add a key, to renew the key's certificate (quietly, about once a week while you're online), when you choose <strong>Check for updated key</strong>, to start a trial, and to remove a key.</li>
     <li>Each of those requests sends the key and a one-way code for your computer: a SHA-256 hash of Glimmer's name and your operating system's machine ID. Never your computer's name, and never the machine ID itself. The service uses the code to keep a key to three computers (one for a trial or beta key).</li>
     <li>Starting a trial sends the email address you enter, with that computer code instead of a key. The address is kept for support only and never goes in the key. The service keeps a record of each trial, so a computer can't start a second one.</li>
     <li>To limit how many trials one internet connection can start, the service also keeps, with each trial, a code made from your IP address with a secret key. Without that key the code can't be turned back into the address.</li>
