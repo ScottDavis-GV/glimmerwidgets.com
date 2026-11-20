@@ -27,9 +27,9 @@
 const STORE = {
   open: false,
   prices: {
-    pro: '$20',
-    founder: '$10',
-    renewal: '$10',
+    pro: '$29',
+    founder: '$15',
+    renewal: '$15',
   },
   links: {
     pro: '',
